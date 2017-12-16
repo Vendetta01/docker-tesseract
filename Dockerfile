@@ -14,9 +14,9 @@ ENV TESSDATA_TRAINEDDATA tessdata_best
 ##############################
 # Install necessary software
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
-    apk add --no-cache --virtual .build-deps python3-dev build-base git sudo \
+    apk add --no-cache --virtual .build-deps build-base git sudo \
       libmagic leptonica-dev libpng-dev libjpeg tiff-dev zlib-dev \
-      autoconf autoconf-archive automake libtool pkgconf gnupg file && \
+      autoconf autoconf-archive automake libtool pkgconf file && \
     cd /tmp/ && \
     git clone https://github.com/tesseract-ocr/tesseract.git tesseract-ocr && \
     cd tesseract-ocr && \
@@ -32,8 +32,8 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
     wget https://github.com/tesseract-ocr/${TESSDATA_TRAINEDDATA}/raw/master/osd.traineddata && \
     rm -rf /tmp/tesseract-ocr/ && \
     apk del .build-deps && \
-    apk add --no-cache python3 sudo imagemagick ghostscript gnupg bash rsync sqlite \
-      poppler-utils unpaper libmagic leptonica libpng libjpeg tiff zlib-dev shadow
+    apk add --no-cache sudo imagemagick ghostscript bash \
+      poppler-utils unpaper libmagic leptonica libpng libjpeg tiff zlib
 
 
 WORKDIR /exchange
