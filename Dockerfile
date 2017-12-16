@@ -33,7 +33,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
     rm -rf /tmp/tesseract-ocr/ && \
     apk del .build-deps && \
     apk add --no-cache python3 sudo imagemagick ghostscript gnupg bash rsync sqlite \
-      poppler-utils unpaper libmagic leptonica libpng libjpeg tiff zlib shadow
+      poppler-utils unpaper libmagic leptonica libpng libjpeg tiff zlib-dev shadow
 
 
 WORKDIR /exchange

@@ -7,5 +7,5 @@ install:
   - docker build -t docker-tesseract .
 
 script:
-  - docker run --user `id -u`:`id -g` -v `pwd`/test:/exchange docker-tesseract eng_bw-png test_output txt
-  - docker run --user `id -u`:`id -g` -v `pwd`/test:/exchange docker-tesseract eng_bw-png test_output pdf
+  - docker run -v `pwd`/test:/exchange docker-tesseract eng_bw.png test_output txt
+  - docker run -v `pwd`/test:/exchange docker-tesseract eng_bw.png test_output pdf
