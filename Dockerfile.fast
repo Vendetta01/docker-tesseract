@@ -6,8 +6,8 @@ FROM alpine:edge
 ENV TESSERACT_GIT_COMMIT eba0ae3b88a46a93e981770caa0b148d65cc4468
 
 # Use best or fast language data
-ENV TESSDATA_TRAINEDDATA tessdata_best
-#ENV TESSDATA_TRAINEDDATA tessdata_fast
+#ENV TESSDATA_TRAINEDDATA tessdata_best
+ENV TESSDATA_TRAINEDDATA tessdata_fast
 
 
 

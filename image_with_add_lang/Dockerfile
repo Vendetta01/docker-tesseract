@@ -9,6 +9,10 @@ ENV TESSERACT_GIT_COMMIT eba0ae3b88a46a93e981770caa0b148d65cc4468
 ENV TESSDATA_TRAINEDDATA tessdata_best
 #ENV TESSDATA_TRAINEDDATA tessdata_fast
 
+# Install additional languages
+ENV TESSDATA_ADD_LANGS=deu
+#ENV TESSDATA_ADD_LANGS=deu,ita
+# TODO: change install command to use script that installs all languages from above list (comma separated
 
 
 ##############################
