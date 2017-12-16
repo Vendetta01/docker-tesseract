@@ -13,5 +13,5 @@ This mounts the current working directory to /exchange inside the container (whi
 The --user option ensures that newly created files have the uid and gid of the user which runs the docker command.
 
 
-.. |Travis| image:: https://travis-ci.org/VendettA01/docker-tesseract.svg?branch=master
+.. |Travis| image:: https://travis-ci.org/Vendetta01/docker-tesseract.svg?branch=master
    :target: https://travis-ci.org/Vendetta01/docker-tesseract
