@@ -3,7 +3,9 @@ FROM alpine:edge
 
 ##############################
 # Environment variables
-ENV TESSERACT_GIT_COMMIT eba0ae3b88a46a93e981770caa0b148d65cc4468
+ENV TESSERACT_GIT_COMMIT 51316994ccae0b48692d547030f26c0969308214
+# eba0ae3b88a46a93e981770caa0b148d65cc4468
+
 
 # Use best or fast language data
 ENV TESSDATA_TRAINEDDATA tessdata_best
